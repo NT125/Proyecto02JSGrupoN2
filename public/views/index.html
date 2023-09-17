@@ -29,13 +29,13 @@
         <div class="row "> 
           <form action="">
             <div>
-              <input type="text" required name="" id="" placeholder="Nombre del Producto​">
+              <input type="text" name="" id="" placeholder="Nombre del Producto​">
             </div>
             <div>
-              <input type="number" required min="0" name="" id="" placeholder="Precio del Producto​">
+              <input type="number" min="0" name="" id="" placeholder="Precio del Producto​">
             </div>
             <div>
-              <input type="text" required name="" id="" placeholder="Seleccione el Comercio">
+              <input type="text" name="" id="" placeholder="Seleccione el Comercio">
             </div>
           </form>
         </div>  
@@ -43,22 +43,22 @@
         <!-- ** BOTONES ** -->
         <div class="row"> 
           <div class="Agregando">
-            <button id="botonAgregar" type="reset"><i class="bi bi-plus-circle"></i> Agregar Producto</button>
+            <button id="botonAgregar"><i class="bi bi-plus-circle"></i> Agregar Producto</button>
           </div>
         </div>
         <div class="row">
             <div class="botones">
-                <button id="botonReset" type="reset"><i class="bi bi-list-ul"></i> Listar Productos</button>
-                <button id="botonReset" type="reset"><i class="bi bi-sort-down-alt"></i> Listar más Baratos</button>
+                <button id="botonListar"><i class="bi bi-list-ul"></i> Listar Productos</button>
+                <button id="botonMenorPrecio"><i class="bi bi-sort-down-alt"></i> Listar más Baratos</button>
             </div>
         </div>
 
         <!-- ** SALIDA ** -->
-        <div class="row" id="salida">
+        <div class="row" >
           <!-- Ejemplo de como debe estar la salida  -->
             <div class="listado-Producto col-md-6" >
                 <h3>Listado de Productos</h3> 
-                <table>
+                <table id="salidaListado">
                   <thead>
                     <tr>
                       <th>Nombre</th>
@@ -87,7 +87,7 @@
             </div>
             <div class="menor-Precio col-md-6" >
                 <h3>Productos con Menor Precio​</h3> 
-                <table>
+                <table id="salidaMenorPrecio">
                   <thead>
                     <tr>
                       <th>Nombre</th>
