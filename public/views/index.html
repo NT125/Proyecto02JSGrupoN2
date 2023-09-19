@@ -3,123 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Site</title>
+  <title>COMPARADOR DE PRODUCTOS</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./../css/styles.css">
-  <link rel= "stylesheet" type= "text/css" herf= "http.//fonts.googleapis.com/css?family=Montserrat">
-  <link rel= "stylesheet" type= "text/css" herf= "http.//fonts.googleapis.com/css?family=Poppins">
-  </head>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Poppins">
+</head>
 <body>
   <!-- HEADER -->
   <header>
     <div class="container">
-        <h1>DigitalDreamers </h1>
+      <h1>DigitalDreamers </h1>
     </div>
   </header>
   <!-- MAIN -->
   <main>
     <div class="container">
-        <!-- **Mensaje, background** -->
-        <div class="row background">
-            <h2>Comparador de precios entre Proveedores​</h2>
-            <p>Ingresa los nombres, los proveedores y sus precios.​</p>
-        </div>
-        <!-- ** ENTRADA ** -->
-        <div class="row "> 
-          <form action="">
-            <div>
-              <input type="text" name="" id="" placeholder="Nombre del Producto​">
-            </div>
-            <div>
-              <input type="number" min="0" name="" id="" placeholder="Precio del Producto​">
-            </div>
-            <div>
-              <input type="text" name="" id="" placeholder="Seleccione el Comercio">
-            </div>
-          </form>
-        </div>  
-
-        <!-- ** BOTONES ** -->
-        <div class="row"> 
-          <div class="Agregando">
-            <button id="botonAgregar"><i class="bi bi-plus-circle"></i> Agregar Producto</button>
+      <!-- **Mensaje, background** -->
+      <div class="row background">
+        <h2>Comparador de precios entre Proveedores​</h2>
+        <p>Ingresa los nombres, los proveedores y sus precios.​</p>
+      </div>
+      <!-- ** ENTRADA ** -->
+      <div class="row ">
+        <form id="formulario">
+          <div>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre del Producto​">
           </div>
-        </div>
-        <div class="row">
-            <div class="botones">
-                <button id="botonListar"><i class="bi bi-list-ul"></i> Listar Productos</button>
-                <button id="botonMenorPrecio"><i class="bi bi-sort-down-alt"></i> Listar más Baratos</button>
-            </div>
-        </div>
+          <div>
+            <input type="number" min="0" name="precio" id="precio" placeholder="Precio del Producto​">
+          </div>
+          <div>
+            <input type="text" name="comercio" id="comercio" placeholder="Seleccione el Comercio">
+          </div>
+        </form>
+      </div>
 
-        <!-- ** SALIDA ** -->
-        <div class="row" >
-          <!-- Ejemplo de como debe estar la salida  -->
-            <div class="listado-Producto col-md-6" >
-                <h3>Listado de Productos</h3> 
-                <table >
-                  <thead>
-                    <tr>
-                      <th>Nombre</th>
-                      <th>Precio</th>
-                      <th>Mercado</th>
-                    </tr>
-                  </thead>
-                  <tbody id="salidaListado">
-                    <tr>
-                      <td>Arroz</td>
-                      <td>$ 200</td>
-                      <td>Dia</td>
-                    </tr>
-                    <tr>
-                      <td>Arroz</td>
-                      <td>$ 500</td>
-                      <td>Comodin</td>
-                    </tr>
-                    <tr>
-                      <td>Arroz</td>
-                      <td>$ 700</td>
-                      <td>Yahuar</td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-            <div class="menor-Precio col-md-6" >
-                <h3>Productos con Menor Precio​</h3> 
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Nombre</th>
-                      <th>Precio</th>
-                      <th>Mercado</th>
-                    </tr>
-                  </thead>
-                  <tbody id="salidaMenorPrecio">
-                    <tr>
-                      <td>Arroz</td>
-                      <td>$ 200</td>
-                      <td>Dia</td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
+      <!-- ** BOTONES ** -->
+      <div class="row">
+        <div class="Agregando">
+          <button id="botonAgregar"><i class="bi bi-plus-circle"></i> Agregar Producto</button>
         </div>
+      </div>
+      <div class="row">
+        <div class="botones">
+          <button id="botonListar"><i class="bi bi-list-ul"></i> Listar Productos</button>
+          <button id="botonMenorPrecio"><i class="bi bi-sort-down-alt"></i> Listar más Baratos</button>
+        </div>
+      </div>
+
+      <!-- ** SALIDA ** -->
+      <div class="row">
+        <!-- Ejemplo de como debe estar la salida  -->
+        <div class="listado-Producto col-md-6">
+          <h3>Listado de Productos</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Mercado</th>
+              </tr>
+            </thead>
+            <tbody id="salidaListado">
+              <!-- Aquí se mostrarán los productos ingresados -->
+            </tbody>
+          </table>
+        </div>
+        <div class="menor-Precio col-md-6">
+          <h3>Productos con Menor Precio​</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Mercado</th>
+              </tr>
+            </thead>
+            <tbody id="salidaMenorPrecio">
+              <!-- Aquí se mostrarán los productos con menor precio -->
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </main>
   <!-- FOOTER -->
   <footer>
     <p><i class="bi bi-github"></i> Creadores:</p>
-      <ul>
-          <li class="list-inline-item"><a href="https://github.com/AmaruSegovia" target="_blank"> Maru</a></li>
-          <li class="list-inline-item"><a href="https://github.com/nt-neru" target="_blank">Neru</a></li>
-          <li class="list-inline-item"><a href="https://github.com/RowsMush022" target="_blank">Ro</a></li>
-          <li class="list-inline-item"><a href="https://github.com/NT125" target="_blank">NT</a></li>
-          <li class="list-inline-item"><a href="https://github.com/Zendo27" target="_blank">Zendo</a></li>
-      </ul>
+    <ul>
+      <li class="list-inline-item"><a href="https://github.com/AmaruSegovia" target="_blank"> Maru</a></li>
+      <li class="list-inline-item"><a href="https://github.com/nt-neru" target="_blank">Neru</a></li>
+      <li class="list-inline-item"><a href="https://github.com/RowsMush022" target="_blank">Ro</a></li>
+      <li class="list-inline-item"><a href="https://github.com/NT125" target="_blank">NT</a></li>
+      <li class="list-inline-item"><a href="https://github.com/Zendo27" target="_blank">Zendo</a></li>
+    </ul>
     <p>Copyright ©2023 DigitalDreamers</p>
-
   </footer>
-
+<script src="index.js"></script>
 </body>
-</html>
+</html> 
