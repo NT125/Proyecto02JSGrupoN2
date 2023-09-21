@@ -1,4 +1,4 @@
-# Calculadora de Precios en JavaScript
+# Comparador de Precios en JavaScript
 ### Segundo Proyecto Grupal de JavaScript de Fundamentos de Programación Web - TUDIVJ
 
 
