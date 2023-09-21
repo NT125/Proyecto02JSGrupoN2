@@ -19,14 +19,14 @@ let agregarProducto = () => {
     productos.push(producto);
 
     // Añadiendo producto al listado de productos baratos
-    let productoReemplazado = false;
-    for (let i = 0; i < productos.length; i++) {
-      if (producto.nombre == productos[i].nombre && producto.precio < productos[i].precio) {
-        productosBaratos[i] = producto;
-        productoReemplazado = true;
-        console.log('Se reemplaza producto');
+    let productoReemplazado = true;
+  
+      if (!productosBaratos[producto.nombre] || producto.precio < productosBaratos[producto.nombre].precio) {
+        productosBaratos[producto.nombre] = producto;
+        console.log('Se añade o actualiza producto barato');
       }
-    }
+    
+    
 
     if (productoReemplazado == false) {
       productosBaratos.push(producto);
@@ -67,19 +67,20 @@ let listarMenorPrecio = () => {
   const salidaMenorPrecio = document.getElementById('salidaMenorPrecio');
   salidaMenorPrecio.innerHTML = '';
 
-  for (const producto of productosBaratos) {
+  for (const nombreProducto in productosBaratos) {
+    const producto = productosBaratos[nombreProducto];
     const row = document.createElement('tr');
     row.innerHTML = `
       <td>${producto.nombre}</td>
       <td>$${producto.precio}</td>
       <td>${producto.comercio}</td>
     `;
-
+  
     salidaMenorPrecio.appendChild(row);
     console.log('Se escribe producto');
   }
 }
-
+//antes del cambio
 // Agregar eventos a los botones
 document.getElementById('botonAgregar').addEventListener('click', agregarProducto);
 document.getElementById('botonListar').addEventListener('click', listarProductos);
