@@ -38,7 +38,10 @@ main .container{
 }
 .row{
     background-color: #fff;
+    margin-bottom: 20px;
 }
+
+
 .background{
     background-image: url(./../img/background_1.jpg);
     background-position: center center;
@@ -60,10 +63,12 @@ form{
     padding: 40px 0;
     gap: 10px;
     margin: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 input{
     width: 220px;
     padding: 4px 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 /*--- Botones ---*/
 .Agregando{
@@ -86,6 +91,15 @@ button{
     border-radius: 3px;
     color: #fff;
     border: 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Agrega una transición suave al color de fondo */
+  
+    /* Cambia el color al pasar el mouse sobre los botones */
+    &:hover {
+      background-color: darken(var(--menor-precio), 10%); /* Cambia el color al pasar el mouse */
+    }
 }
 #botonAgregar{
     background-color: #a35130;
@@ -155,3 +169,16 @@ footer a{
         width: 300px;
     }
 }
+
+.titulo-digital {
+    margin-top: 2%;
+    text-align: center; 
+    font-size: 3rem;
+    font-family: 'PixelFont', sans-serif;
+  }
+
+  @font-face {
+    font-family: 'PixelFont';
+    src: url('../fuentes/dogicapixelbold.ttf') format('truetype');
+    /* Agrega otras fuentes si lo necesitas */
+  }
