@@ -5,7 +5,7 @@ const productosBaratos = []
 // Función para agregar un producto al array
 let agregarProducto = () => {
   const nombre = document.getElementById('nombre').value;
-  const precio = document.getElementById('precio').value;
+  const precio = parseFloat(document.getElementById('precio').value);
   const comercio = document.getElementById('comercio').value;
 
   if (nombre && precio && comercio) {
